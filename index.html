@@ -50,6 +50,25 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+        /* Стили для блока "Обо мне" */
+        .about-me {
+            background: #f4f4f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .about-me h3 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #3498db;
+            text-align: center;
+        }
+        .about-me p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -78,20 +97,49 @@
         <p>Возьмите лист бумаги и попробуйте нарисовать свои ощущения. Какие цвета, формы или текстуры приходят вам в голову? Это поможет вам лучше понять себя и выразить эмоции через творчество.</p>
     </section>
     <section>
-        <h2>Приглашаю вас </h2>
+        <h2>Приглашаю вас</h2>
         <p>Подписывайтесь и приходите на групповые встречи и индивидуальные сессии, на которых мы будем вместе:</p>
-         <ul>    
-          <li>слушать</li>
-           <li>   рисовать</li>
-             <li> рефлексировать </li>
-             <li> дышать</li>
-            </ul>   
-          <p>Узнать больше о том, как это было можно в нашей группе 
-        
-           <a href="https://vk.com/proemotional" target="_blank"> ВКонтакте</a></p>
-        <p>Информация о групповых мероприятиях будет опубликована отдельно, а прямо сейчас вы можете записаться на индивидуальные сессии</p>
-     
+        <ul>    
+            <li>слушать</li>
+            <li>рисовать</li>
+            <li>рефлексировать</li>
+            <li>дышать</li>
+        </ul>
+        <p>Узнать больше о том, как это было можно в нашей группе:
+            <a href="https://vk.com/proemotional" target="_blank"> ВКонтакте</a>
+        </p>
+        <p>Информация о групповых мероприятиях будет опубликована отдельно, а прямо сейчас вы можете записаться на индивидуальные сессии:</p>
     </section>
+    
+    <!-- Новый блок "Обо мне" -->
+    <section class="about-me">
+        <h3>Обо мне</h3>
+        <p>Я сертифицированный коуч Международной академии коучинга и веду практику уже 2 года. Моя цель — помочь вам лучше понять себя, найти внутреннюю гармонию и освоить новые способы управления эмоциями.</p>
+        <p>Кроме того, я профессиональный музыкант и педагог. Погружаю людей в искусство с помощью классического вокала и игры на саксофоне. Музыка для меня — это путь к самовыражению и внутреннему освобождению. В своих сессиях я использую опыт в музыке и коучинге, чтобы создавать уникальные, глубокие и трансформирующие практики.</p>
+    </section>
+
+    <script>
+        document.getElementById('sessionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const message = document.getElementById('message').value;
+
+            console.log('Запись на сессию');
+            console.log('Имя:', name);
+            console.log('Email:', email);
+            console.log('Телефон:', phone);
+            console.log('Дата:', date);
+            console.log('Время:', time);
+            console.log('Сообщение:', message);
+
+            alert('Спасибо за запись! Мы свяжемся с вами.');
+            document.getElementById('sessionForm').reset();
+        });
+    </script>
 </body>
 </html>
-
